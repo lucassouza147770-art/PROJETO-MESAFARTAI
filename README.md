@@ -39,6 +39,6 @@ O projeto está alinhado à ODS 2 da ONU, relacionada ao combate à fome, segura
 ## Integrantes
 
 * Lucas Pinheiro de Souza — 147770
-* Guilherme Ferreira de Sousa — 
+* Guilherme Ferreira de Sousa — 150467
 * Giovanna Ghermacovski — 151707
 * Anne Marie Braz Lambert Damas — 151671
