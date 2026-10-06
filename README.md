@@ -38,8 +38,7 @@ O projeto está alinhado à ODS 2 da ONU, relacionada ao combate à fome, segura
 
 ## Integrantes
 
-* NOME COMPLETO — RA/RGM
-* NOME COMPLETO — RA/RGM
-* NOME COMPLETO — RA/RGM
-* NOME COMPLETO — RA/RGM
-* NOME COMPLETO — RA/RGM
+* Lucas Pinheiro de Souza — 147770
+* Guilherme Ferreira de Sousa — 
+* Giovanna Ghermacovski — 151707
+* Anne Marie Braz Lambert Damas — 151671
