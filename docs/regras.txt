@@ -1,0 +1,55 @@
+REGRAS DA ETAPA 1 - MESAFARTAI
+
+Nesta etapa inicial do projeto devem ser criadas as bases do sistema MESAFARTAI.
+
+As atividades solicitadas são:
+
+1. Criar um repositório público no GitHub com o nome PROJETO-MESAFARTAI.
+
+2. Adicionar os integrantes do grupo e o professor como colaboradores.
+
+3. Criar o arquivo README.md com a descrição do projeto, relação com a ODS 2 e informações dos integrantes.
+
+4. Criar a pasta docs contendo:
+
+* regras.txt
+* escopo_projeto.md
+
+5. Criar a pasta src contendo o arquivo database.py.
+
+6. Criar a pasta assets contendo o logotipo do projeto.
+
+7. Criar e executar o banco de dados SQLite3 chamado mesafartai.db.
+
+8. O banco deve possuir as tabelas necessárias para usuários, doações e matches logísticos.
+
+9. Inserir dados iniciais de teste no banco.
+
+10. Registrar no escopo do projeto o prompt utilizado para criação do logotipo por IA.
+
+
+ETAPAS DO DESENVOLVIMENTO DO MOTOR NLU (AC-3)
+
+Etapa 1: Clonar o Repositório
+- Copiar a URL HTTPS do repositório no GitHub.
+- Executar o comando 'git clone' seguido da URL no terminal.
+- Acessar a pasta raiz com o comando 'cd PROJETO-MESAFARTAI'.
+
+Etapa 2: Abrir no VS Code e Instalar Bibliotecas
+- Abrir a pasta do projeto no VS Code.
+- Criar o arquivo 'requirements.txt' na raiz com as versões específicas das bibliotecas (streamlit, scikit-learn, pandas, numpy).
+- Instalar os pacotes executando 'pip install -r requirements.txt'.
+
+Etapa 3: Criar o código do Motor NLU
+- Criar o diretório 'src/' caso não exista.
+- Criar o arquivo 'nlu.py' dentro da pasta 'src/'.
+- Implementar o pipeline contendo a base de treino, classe MotorNLU (com TF-IDF e Random Forest) e a rotina de testes.
+
+Etapa 4: Executar e Testar (Validação Local)
+- Executar o comando 'python src/nlu.py' no terminal do VS Code.
+- Validar as respostas do modelo para a bateria de testes automatizados com base no limiar de threshold (0.60).
+
+Etapa 5: Realizar Commit e Push para o GitHub
+- Adicionar todas as modificações usando 'git add .'.
+- Realizar o commit com a mensagem padronizada: 'feat(nlu): implementa motor TF-IDF + Random Forest com trava de threshold'.
+- Enviar as alterações para o servidor remoto com o comando 'git push origin main'.
