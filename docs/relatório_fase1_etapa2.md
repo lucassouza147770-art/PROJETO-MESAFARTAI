@@ -37,13 +37,25 @@ Você pode refazer a mensagem informando se deseja **doar alimentos** ou **solic
 ```
 
 ### 4. Descreva como você poderia fazer para os resultados de testes serem melhores, aumentando o grau de confiança dos resultados.
-Para elevar o grau de confiança e mitigar falsos fallbacks (como ocorreu no teste da frase *"Nossa instituição precisa de mantimentos"*), podemos adotar as seguintes estratégias:
-* **Expandir o Dataset de Treino:** Adicionar mais variações de frases e sinônimos nas listas `frases_treino` e `intencoes_treino`, incluindo palavras-chave como "instituição", "mantimentos" e "necessidade" na classe `solicitar_alimentos`.
-* **Pré-processamento de Texto:** Implementar etapas de limpeza de dados antes da vetorização, tais como conversão para minúsculas, remoção de pontuações, remoção de *stopwords* (palavras irrelevantes como "de", "para", "o") e aplicação de *lemmatization* ou *stemming* (redução de palavras ao seu radical).
-* **Ajuste de Hiperparâmetros:** Testar variações no balanceamento de classes e calibrar o número de árvores do Random Forest para melhorar a distribuição de probabilidades no cálculo do `predict_proba`.
+Para elevar o grau de confiança e mitigar falsos fallbacks, podemos adotar as seguintes estratégias:
+* **Expandir o Dataset de Treino:** Adicionar mais frases e sinônimos para a classe `solicitar_alimentos`, incluindo termos como "instituição", "mantimentos", "necessidade" e "abrigo".
+* **Pré-processamento de Texto:** Aplicar limpeza de texto, conversão para minúsculas, remoção de pontuação e stopwords, além de stemização ou lematização.
+* **Ajuste de Hiperparâmetros:** Testar diferentes valores de `n_estimators`, balanceamento de classes e variações no `TfidfVectorizer`.
 
 ### 5. Descreva por que o Random Forest foi o melhor método de Machine Learning para essa fase.
-O Random Forest se destacou como uma excelente escolha para esta fase inicial pelos seguintes motivos:
-* **Robustez a Ruídos e Overfitting:** Por ser um método de aprendizado baseado em um conjunto (*ensemble*) de múltiplas árvores de decisão independentes, ele reduz drasticamente o risco de sobreajuste (*overfitting*), lidando muito bem com pequenas bases de dados e termos irrelevantes presentes nas frases dos usuários.
-* **Saída Probabilística Direta:** O algoritmo fornece nativamente probabilidades mapeadas para cada classe via método `predict_proba`. Isso tornou a implementação da nossa trava de segurança (Threshold) extremamente simples, confiável e precisa.
-* **Facilidade de Configuração:** Diferente de algoritmos mais complexos como Redes Neurais ou SVMs, o Random Forest exige pouca parametrização inicial para apresentar uma excelente acurácia em tarefas de classificação de texto multiclasse associadas ao TF-IDF.
+O Random Forest foi a melhor escolha porque:
+* **é robusto a ruídos e pequenos datasets**;
+* **oferece probabilidades com `predict_proba`**, o que facilita a trava de segurança;
+* **é fácil de configurar e interpretar** para uma etapa inicial do projeto;
+* **funciona bem com vetorização TF-IDF para classificação de textos curtos**.
+
+### Checklist da etapa concluída
+- [X] Arquivo `src/nlu.py` salvo e executado sem erros no terminal.
+- [X] Trava de Threshold (< 0.60) funcionando nos testes para mensagens incertas/fora de escopo.
+- [X] Arquivo `requirements.txt` atualizado na raiz do repositório.
+- [X] Comandos `git add`, `git commit` e `git push` executados com sucesso.
+- [X] Inserção de dados no `docs/regras.txt` e relatório de execução construído.
+
+### Observação
+O que parecia ser um "!" no editor foi causado por conflito de merge do Git e não por erro de código no `nlu.py`.
+A correção foi feita pela resolução do conflito e pela consolidação do conteúdo da etapa 2 no arquivo de regras e no relatório final.
