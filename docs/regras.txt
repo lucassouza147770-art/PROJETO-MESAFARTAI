@@ -181,3 +181,106 @@ https://github.com/lucassouza147770-art/PROJETO-MESAFARTAI
 email
 
 lucas.souza.147770@a.fecaf.com.br
+
+
+FASE 1 — ETAPA 3 (AC-3)
+
+Extrator de Entidades por Regex e Motor de Matchmaking Logístico por KNN
+
+Objetivo: Implementar o extrator de entidades por expressões regulares (Regex), localizado em src/entities.py, e o motor de matchmaking logístico utilizando o algoritmo KNN, localizado em src/matchmaking.py.
+
+1. Preparação do repositório
+
+Abrir o projeto PROJETO-MESAFARTAI no VS Code.
+
+Sincronizar o repositório com o GitHub utilizando git pull origin main.
+
+Instalar as dependências do projeto utilizando pip install -r requirements.txt.
+
+2. Extrator de Entidades por Regex
+
+Arquivo: src/entities.py
+
+Criar a classe ExtratorEntidades com as seguintes funcionalidades:
+
+Identificar quantidades numéricas associadas a unidades como kg, quilos, kilos, caixas e sacas utilizando expressões regulares.
+
+Identificar alimentos a partir de um vocabulário predefinido.
+
+Identificar datas de validade com base nas expressões "hoje" e "amanhã".
+
+Definir uma data padrão de três dias à frente quando não houver indicação de validade.
+
+Processar o texto e retornar um dicionário contendo o alimento, a quantidade e a data de validade.
+
+Teste de execução:
+
+python src/entities.py
+
+3. Motor de Matchmaking Logístico por KNN
+
+Arquivo: src/matchmaking.py
+
+Criar a classe MotorMatchmaking com as seguintes funcionalidades:
+
+Utilizar SQLite para armazenar e consultar os dados das ONGs.
+
+Criar a tabela usuarios caso ela ainda não exista.
+
+Inserir dados fictícios de ONGs para testes quando não houver ONGs cadastradas.
+
+Consultar as ONGs cadastradas no banco de dados.
+
+Utilizar o algoritmo KNN, com distância euclidiana, para encontrar a ONG geograficamente mais próxima das coordenadas do doador.
+
+Retornar o identificador e o nome da ONG selecionada, além da distância estimada em quilômetros.
+
+Teste de execução:
+
+python src/matchmaking.py
+
+4. Validação dos módulos
+
+Executar o extrator de entidades e verificar a saída no terminal.
+
+Executar o motor de matchmaking e verificar a ONG encontrada e a distância estimada.
+
+Corrigir eventuais erros de execução antes de enviar as alterações ao GitHub.
+
+5. Versionamento e sincronização com GitHub
+
+Executar os seguintes comandos no terminal do VS Code:
+
+Verificar as alterações:
+
+git status
+
+Adicionar as alterações:
+
+git add .
+
+Criar o commit:
+
+git commit -m "feat(logistics): implementa extracao por regex e matchmaking knn"
+
+Enviar as alterações para o repositório remoto:
+
+git push origin main
+
+6. Checklist de conclusão
+
+Repositório sincronizado com o GitHub.
+
+Dependências instaladas.
+
+Arquivo src/entities.py criado e testado.
+
+Arquivo src/matchmaking.py criado e testado.
+
+Arquivo docs/regras.txt atualizado.
+
+Alterações registradas em um commit.
+
+Alterações enviadas para o GitHub.
+
+Resultado esperado: módulos de extração de entidades e matchmaking logístico implementados, testados e versionados no repositório do projeto MESAFARTAI.
